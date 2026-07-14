@@ -2,16 +2,27 @@ from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseNotFound
 # Create your views here.
 
-_dict={
-"001":"PS5",
-"002":"PS4",
-"003":"Xbox",
+int_dict={
+1:"PS5",
+2:"PS4",
+3:"Xbox",
+}
+text_dict={
+    "1st":1,
+    "2st":2,
+    "3st":3
 }
 def index(request):
     return HttpResponse ('welcome to the product')
 
-def item(request,product_id):
-    if product_id in _dict:
-        return HttpResponse(_dict[product_id])
+def int_item(request,product_id):
+    if product_id in int_dict:
+        return HttpResponse(int_dict[product_id])
     else:
+        return HttpResponseNotFound ("product Not Found")
+    
+def text_item (request,product_id):
+    if product_id in text_dict:
+        return HttpResponse(int_dict[text_dict[product_id]])
+    else :
         return HttpResponseNotFound ("product Not Found")
