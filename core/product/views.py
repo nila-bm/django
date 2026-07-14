@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse,HttpResponseNotFound
+from django.http import HttpResponse,HttpResponseNotFound,HttpResponseRedirect
 # Create your views here.
 
 int_dict={
@@ -23,6 +23,6 @@ def int_item(request,product_id):
     
 def text_item (request,product_id):
     if product_id in text_dict:
-        return HttpResponse(int_dict[text_dict[product_id]])
+        return HttpResponseRedirect(f'/product/{str(text_dict[product_id])}')
     else :
         return HttpResponseNotFound ("product Not Found")
