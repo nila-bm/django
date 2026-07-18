@@ -8,8 +8,8 @@
 </head>
 <body>
     <h2>Welcome to the home page </h2> 
-        {% for name in names %}
-        {{name}}<br>
+        {% for k,v in links.items %}
+        <a href="{{v}}">{{k}}</a><br>
         {% endfor %}
 </body>
 </html>
