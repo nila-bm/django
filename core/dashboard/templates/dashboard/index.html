@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="{% static 'dashboard/style.css' %}">
 </head>
 <body>
-    <h2>Welcome to the home page {{name}}</h2>
+    <h2>Welcome to the home page </h2> 
+        {% for name in names %}
+        {{name}}<br>
+        {% endfor %}
 </body>
 </html>
