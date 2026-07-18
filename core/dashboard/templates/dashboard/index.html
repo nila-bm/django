@@ -11,5 +11,8 @@
         {% for k,v in links.items %}
         <a href="{{v}}">{{k}}</a><br>
         {% endfor %}
+        <form action="{% url "dashboard" %}" method="get">
+    <button type="submit">بازگشت به صفحه اصلی</button>
+</form>
 </body>
 </html>
