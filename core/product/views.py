@@ -13,7 +13,7 @@ text_dict={
     "3st":3
 }
 def index(request):
-    return HttpResponse ('welcome to the product')
+    return render(request,"product/index.html",{})
 
 def int_item(request,product_id):
     if product_id in int_dict:
