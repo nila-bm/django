@@ -10,6 +10,7 @@
     <title>{% block page_title %}{% endblock %}</title>
 </head>
 <body>
+    {% include "includes/navbar.html" %}
     {% block page_content %}{% endblock %}
     <script src="{% static "bootstrap/bootstrap.bundle.min.js" %}"></script>
     {% block page_scripts %}{% endblock %}
