@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'dashboard',
     'product',
     'home',
+    'post',
 ]
 
 MIDDLEWARE = [
