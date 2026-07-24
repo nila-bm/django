@@ -1,0 +1,124 @@
+/* ===== تنظیمات کلی ===== */
+body {
+    font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ===== کانتینر اصلی ===== */
+.farm-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 40px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== تایتل ===== */
+.farm-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px dashed #74b9ff;
+}
+
+.farm-title span {
+    color: #0984e3;
+}
+
+/* ===== لیست ===== */
+.farm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.farm-list li {
+    background: white;
+    padding: 18px 25px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-right: 6px solid #6c5ce7;
+    font-size: 1.05rem;
+    color: #2d3436;
+}
+
+.farm-list li:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 12px 28px rgba(108, 92, 231, 0.2);
+    border-right-color: #fd79a8;
+}
+
+/* ===== برچسب‌های داخل آیتم ===== */
+.farm-name {
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.farm-city {
+    color: #636e72;
+    font-size: 0.9rem;
+    background: #f1f2f6;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.farm-area {
+    font-weight: 600;
+    color: #0984e3;
+    background: #dfe6e9;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== حالت خالی ===== */
+.empty-message {
+    text-align: center;
+    color: #636e72;
+    font-size: 1.2rem;
+    padding: 40px 0;
+    background: #f8f9fa;
+    border-radius: 16px;
+    border: 2px dashed #b2bec3;
+}
+
+/* ===== شمارنده ===== */
+.farm-counter {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dfe6e9;
+}
+
+/* ===== ریسپانسیو (موبایل) ===== */
+@media (max-width: 600px) {
+    .farm-container {
+        padding: 20px;
+    }
+    
+    .farm-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 0.95rem;
+    }
+    
+    .farm-title {
+        font-size: 1.6rem;
+    }
+}

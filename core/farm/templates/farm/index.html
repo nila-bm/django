@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_file %}
+    <link rel="stylesheet" href="{% static 'farm/style.css' %}">
+{% endblock %}
+
+{% block page_content %}
+    <div class="farm-container">
+        <h1 class="farm-title">🌾 <span>لیست مزارع</span></h1>
+        
+        {% if farms %}
+            <ul class="farm-list">
+                {% for farm in farms %}
+                    <li>
+                        <span class="farm-name">{{ farm.name }}</span>
+                        <span class="farm-city">📍 {{ farm.city }}</span>
+                        <span class="farm-area">📐 {{ farm.area }} هکتار</span>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="farm-counter">
+                تعداد کل مزارع: <strong>{{ farms|length }}</strong>
+            </div>
+        {% else %}
+            <div class="empty-message">
+                🌱 هنوز مزرعه‌ای ثبت نشده است.
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
